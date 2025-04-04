@@ -42,7 +42,7 @@ const Footer = () => {
           <p>
             網站出錯了？{' '}
             <a
-              href="https://forms.gle/sHCAX3Ybw2fwRXQt7"
+              href="https://forms.gle/H4T7bKnj5FFMDAev5"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
@@ -79,7 +79,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-blue-600"
               >
-                hyjdevelop
+                HYJdevelop
               </a>
             </h4>
             <h4 className="text-sm font-medium mb-4">關注我們</h4>

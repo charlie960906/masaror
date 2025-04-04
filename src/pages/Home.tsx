@@ -1,8 +1,10 @@
 import { Camera, FileText, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// 導入背景圖片（從 src/assets/ 目錄）
+import backgroundImage from './assets/background.jpg';
+
 const Home = () => {
-  // 假設的募款數據
   const fundraisingGoal = 100000; // 目標金額（單位：美元）
   const currentAmount = 65000; // 當前金額
   const progressPercentage = Math.min((currentAmount / fundraisingGoal) * 100, 100); // 計算進度百分比
@@ -10,27 +12,23 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-50 to-white text-center px-4 relative">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          我們致力於幫助馬紹爾群島
-          <div className="mt-4 space-x-10">
-            <span className="text-blue-500">軟體</span>
-            <span className="text-yellow-300">網站</span>
-            <span className="text-red-600">社群</span>
-          </div>
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-0">
-          我們的產品將各地的人與人聯繫在一起
-        </p>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-0">
-          為大家創造機會並發出聲音
-        </p>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-0">
-          我們正在努力，建立一個安全、自由、開放的社群
-        </p>
-        <div className="animate-bounce absolute bottom-4 mid transform -translate-x-1/2">
+      <section
+        className="min-h-screen flex flex-col items-center justify-center text-center px-4 relative bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        {/* 半透明背景層 */}
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        {/* 內容 */}
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            致力於幫助馬紹爾群島
+          </h1>
+        </div>
+
+        <div className="animate-bounce absolute bottom-4 mid transform -translate-x-1/2 z-10">
           <svg
-            className="w-8 h-8 text-gray-400"
+            className="w-8 h-8 text-white"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -48,7 +46,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">募款進度</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            我們正在為馬紹爾群島的社群項目募集資金，您的支持將幫助我們實現目標！
+            我們正在為馬紹爾群島募集資金，您的支持將幫助我們實現目標！
           </p>
 
           {/* 進度條 */}

@@ -1,0 +1,37 @@
+MASAROR
+├── .bolt
+├── public
+│   ├── background.jpg
+│   ├── index.html
+│   ├── logo.png
+└── src
+│   ├── components
+│      │       ├──Footer.tsx
+│      │       ├──Header.css
+│      │       └──Header.tsx
+│   ├── hooks
+│      │       └──useScrollToTop.ts
+│   └── pages
+│      │       ├──articles
+│      │       |   ├──Article1.tsx
+│      │       |   ├──Article2.tsx
+│      │       │  └──Article3.tsx
+│      │       ├──Articles.tsx
+│      │       ├──Gallery.tsx
+│      │       ├──Help.tsx
+│      │       └──Home.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── .gitignore
+├── eslint.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
